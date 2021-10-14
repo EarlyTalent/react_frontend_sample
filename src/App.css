@@ -21,16 +21,46 @@
   margin-left: 5vmin;
 }
 
+.App-div {
+  background-color: #576173;
+  color: #282c34;
+  border-radius: 0.5em;
+  padding: 0.01vmin 0;
+}
+
+.App-div > * {
+  display: block;
+  padding: 0 1em;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  padding-left: 5vmin;
+  padding: 0 5vmin;
   text-align: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.Post-preview {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Post-hr {
+  border: 1px solid #282c34;
+  background-color: #282c34;
+  height: 1px;
+}
+
+h3 {
+  margin-top: 0px;
+  padding-top: 1em;
+}
+
 .App-link {
   color: #61dafb;
+  text-decoration: underline;
+  cursor: pointer;
 }

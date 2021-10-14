@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './../levvel-logo.svg';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import { BeatLoader } from 'react-spinners';
-import { wait } from '@testing-library/dom';
 
 // data query
 const fetchPosts = async () => {
@@ -25,8 +24,32 @@ const fetchPosts = async () => {
     return data;
 }
 
+// top posts with number of comments as metric
+const TopPosts = (props) => {
+    const posts = props.posts;
+    const topPosts = posts.sort(function(a, b) {
+        if (a.comments.length < b.comments.length) return -1;
+        if (a.comments.length > b.comments.length) return 1;
+        return 0;
+    }).slice(-3);
+
+    return (
+        <div className='App-div'>
+            {topPosts.map((post, i) => {
+                return <>
+                    <p className='Post-preview'>
+                        <b>{post.title}:</b> {post.body}
+                    </p>
+                    {i === topPosts.length - 1 ? <></> : <hr className='Post-hr'></hr>}
+                </>
+            })}
+        </div>
+    )
+}
+
 const Home = () => {
     const { data, status, error } = useQuery('blogPosts', fetchPosts);
+    console.log(data)
 
     if (status === 'loading') {
         return (<>
@@ -41,7 +64,17 @@ const Home = () => {
 
     return (<>
         <h3>Check out top posts from our authors!</h3>
-        
+        {data.map(user => {
+            return (<>
+                <Link key={user.id} className='App-link' to={{
+                    pathname: `/users/${user.id}`,
+                    state: { user: user }
+                }}>
+                    <p>{user.name}</p>
+                </Link>
+                <TopPosts posts={user.posts} />
+            </>)
+        })}
     </>)
 }
 
