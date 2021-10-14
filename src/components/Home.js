@@ -36,12 +36,12 @@ const TopPosts = (props) => {
     return (
         <div className='App-div'>
             {topPosts.map((post, i) => {
-                return <>
+                return <span key={post.id}>
                     <p className='Post-preview'>
                         <b>{post.title}:</b> {post.body}
                     </p>
                     {i === topPosts.length - 1 ? <></> : <hr className='Post-hr'></hr>}
-                </>
+                </span>
             })}
         </div>
     )
@@ -49,7 +49,6 @@ const TopPosts = (props) => {
 
 const Home = () => {
     const { data, status, error } = useQuery('blogPosts', fetchPosts);
-    console.log(data)
 
     if (status === 'loading') {
         return (<>
@@ -65,15 +64,15 @@ const Home = () => {
     return (<>
         <h3>Check out top posts from our authors!</h3>
         {data.map(user => {
-            return (<>
-                <Link key={user.id} className='App-link' to={{
+            return (<span key={user.id}>
+                <Link className='App-link' to={{
                     pathname: `/users/${user.id}`,
                     state: { user: user }
                 }}>
                     <p>{user.name}</p>
                 </Link>
                 <TopPosts posts={user.posts} />
-            </>)
+            </span>)
         })}
     </>)
 }

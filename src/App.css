@@ -21,22 +21,25 @@
   margin-left: 5vmin;
 }
 
+.Nav-item {
+  text-decoration: none;
+  color: #282c34;
+  padding: 0 1em;
+  font-size: calc(10px + 2vmin);
+}
+
 .App-div {
   background-color: #576173;
   color: #282c34;
   border-radius: 0.5em;
-  padding: 0.01vmin 0;
-}
-
-.App-div > * {
-  display: block;
-  padding: 0 1em;
+  padding: 0.1vmin 0;
+  margin-bottom: 10vmin;
 }
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  padding: 0 5vmin;
+  padding: 0 15vmin 5vmin 15vmin;
   text-align: left;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -46,17 +49,33 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  display: block;
+  padding: 0 1em;
+}
+
+.Post-full {
+  display: block;
+  padding: 0 1em;
+}
+
+.Post-comments {
+  color: white;
+  font-size: 2.5vmin;
+  margin-bottom: 10vmin;
 }
 
 .Post-hr {
   border: 1px solid #282c34;
   background-color: #282c34;
   height: 1px;
+  display: block;
+  padding: 0 1em;
 }
 
 h3 {
   margin-top: 0px;
   padding-top: 1em;
+  padding-bottom: 3vmin;
 }
 
 .App-link {

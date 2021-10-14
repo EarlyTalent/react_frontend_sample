@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NavBar from './components/NavBar';
 import Home from './components/Home';
+import Author from './components/Author';
 
 function App() {
   const queryClient = new QueryClient();
@@ -11,19 +12,15 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <NavBar />
-        <header className="App-header">
-            <BrowserRouter>
-              <Switch>
-                <Route exact path='/'>
-                  <Home />
-                </Route>
-                <Route path='/users/:id'>
-                  <></>
-                </Route>
-              </Switch>
-            </BrowserRouter>
-        </header>
+        <BrowserRouter>
+          <NavBar />
+          <header className="App-header">
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/users/:id' component={Author} />
+            </Switch>
+          </header>
+        </BrowserRouter>
       </div>
     </QueryClientProvider>
   );
