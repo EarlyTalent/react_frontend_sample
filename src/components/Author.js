@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronCircleUp, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faUser, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Author = (props) => {
     const user = props.location.state.user;
@@ -34,6 +34,17 @@ const Author = (props) => {
                 </div>
             </div>
         })}
+        <p>
+            <FontAwesomeIcon icon={faUser} style={{paddingRight: '2vmin'}}/>
+            {user.name}
+        </p>
+        <div className='Post-comments' style={{paddingLeft: '3vmin'}}>
+            <p><b>Website:</b> {user.website}</p>
+            <p><b>Company:</b> {user.company.name}</p>
+            <p><b>Email:</b> {user.email}</p>
+            <p><b>Phone:</b> {user.phone}</p>
+            <p><b>Address:</b> {user.address.street} {user.address.suite}, {user.address.city} {user.address.zipcode}</p>
+        </div>
     </>)
 }
 
