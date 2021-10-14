@@ -8,26 +8,25 @@ import { wait } from '@testing-library/dom';
 const fetchPosts = async () => {
     const posts = await fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json());
     const users = await fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json());
+    const comments = await fetch('https://jsonplaceholder.typicode.com/comments').then((res) => res.json());
   
-    // merge objects to get author info
+    // join data on author and comments
     let data = [];
-    for (let i = 0; i < posts.length; i++) {
-        const userMatch = users.find(user => user.id === posts[i].userId);
-        const user = Object.keys(userMatch).reduce((acc, key) => {
-            if (key !== 'id') acc[key] = userMatch[key];
-            return acc;
-        }, {});
-        data.push({
-            ...posts[i],
-            ...user
-        });
+    for (let i = 0; i < users.length; i++) {
+        let user = {
+            ...users[i],
+            'posts': posts.filter(post => post.userId === users[i].id)
+        };
+        for (let j = 0; j < user.posts.length; j++) {
+            user.posts[j].comments = comments.filter(comment => comment.postId === user.posts[j].id)
+        };
+        data.push(user);
     }
     return data;
 }
 
 const Home = () => {
     const { data, status, error } = useQuery('blogPosts', fetchPosts);
-    console.log(data);
 
     if (status === 'loading') {
         return (<>
@@ -40,9 +39,10 @@ const Home = () => {
         </>)
     }
 
-    return (
-        <></>
-    )
+    return (<>
+        <h3>Check out top posts from our authors!</h3>
+        
+    </>)
 }
 
 export default Home;
