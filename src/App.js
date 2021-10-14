@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
+import NavBar from './components/NavBar';
+import Home from './components/Home';
 
 function App() {
   const queryClient = new QueryClient();
@@ -10,6 +11,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
+        <NavBar />
         <header className="App-header">
             <BrowserRouter>
               <Switch>

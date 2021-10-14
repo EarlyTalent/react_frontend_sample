@@ -3,8 +3,21 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.App-navbar {
+  background-color: #576173;
+  align-items: left;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.App-navbar > * {
+  display: block;
+  margin-left: 5vmin;
 }
 
 .App-header {
