@@ -18,19 +18,19 @@ const Author = (props) => {
         {user.posts.map((post, i) => {
             return <div key={post.id}>
                 <p>{post.title}</p>
-                <div className='App-div' style={{marginBottom: '1vmin'}}>
+                <div className='App-div'>
                     <p className='Post-full'>{post.body}</p>
-                </div>
-                <div className='Post-comments' onClick={() => toggleComments(i)}>
-                    <div style={{cursor: 'pointer'}}>
-                        Show comments
-                        <FontAwesomeIcon icon={visible[i] ? faChevronUp : faChevronDown} style={{paddingLeft: '1vmin'}} />
-                    </div>
-                    {!visible[i] ? <></> : post.comments.map(comment => {
-                        return <div key={comment.id} style={{paddingLeft: '3vmin', textIndent: '-3vmin'}}>
-                            <p><b>{comment.name}:</b> {comment.body}</p>
+                    <div className='Post-comments' onClick={() => toggleComments(i)}>
+                        <div style={{cursor: 'pointer', paddingBottom: '1vmin'}}>
+                            Show comments
+                            <FontAwesomeIcon icon={visible[i] ? faChevronUp : faChevronDown} style={{paddingLeft: '1vmin'}} />
                         </div>
-                    })}
+                        {!visible[i] ? <></> : post.comments.map(comment => {
+                            return <div key={comment.id} style={{paddingLeft: '3vmin', textIndent: '-3vmin'}}>
+                                <p><b>{comment.name}:</b> {comment.body}</p>
+                            </div>
+                        })}
+                    </div>
                 </div>
             </div>
         })}
