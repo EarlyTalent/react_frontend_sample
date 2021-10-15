@@ -1,9 +1,11 @@
 import './App.css';
 
-function Header() {
+
+
+function Header( { header} ) {
     return (
         <div>
-            <h1>Levvel's Food Blog</h1>
+            <h1> {header} </h1>
         </div>
         
     )
