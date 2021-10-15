@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.articles {
+  padding-top:20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
+.blog-preview {
+  border: 2px solid rgb(28, 143, 209);
+}
+
+
+.header {
+  background-color: cornflowerblue;
+  position:absolute;
+  top:0;
+  width:100%;
+  text-align: left;
+}
+
+.h1 {
+  padding-left:10px
+}
+
+.intro {
+  padding-top:10px
+}
+
+.link-decoration {
+     color: #000000;
+    text-decoration: none;
 }

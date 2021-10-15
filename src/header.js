@@ -1,11 +1,13 @@
 import './App.css';
+import { Link } from 'react-router-dom';
 
 
-
-function Header( { header} ) {
+function Header( { header } ) {
     return (
-        <div>
-            <h1> {header} </h1>
+        <div className = "header">
+            <Link to="/" className="link-decoration"> 
+            <h1 className="h1"> {header} </h1>
+            </Link>
         </div>
         
     )

@@ -9,13 +9,15 @@ function BlogDetails() {
   let firstname = name.split(" ")[0]
   return (
     <>
-    <div>
+    <div>  
       <h1> {name} </h1>
-      <h2> Check out {firstname}'s Recipes!</h2>
+      <h2 className="intro"> Check out {firstname}'s Recipes!</h2>
       {data.authors[id].map((blog) => (
-        <div >
+        <div className = "articles">
+        <div className='blog-preview'>
             <h1>{ blog.article }</h1>
             <p>{ blog.desc }</p>
+        </div>
         </div>
       ))}
     </div>

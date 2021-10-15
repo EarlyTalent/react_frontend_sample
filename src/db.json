@@ -6,6 +6,16 @@
             "desc": "Here's a recipe for the best Tacos" 
         },
         {
+            "name": "James McDaniel",
+            "article": "Tasty Food",
+            "desc": "Here's a recipe for the best Tacos"
+        },
+        {
+            "name": "Chris Hart",
+            "article": "Tasty Tacos",
+            "desc": "Here's a recipe for the best Tacos"
+        },
+        {
             "name": "Sean Shealy",
             "article": "Delicious Cookies",
             "desc": "Here's a recipe for the best Cookies" 
@@ -14,6 +24,11 @@
             "name": "Ashley Grant",
             "article": "Yummy Spaghetti",
             "desc": "Here's a recipe for the best Spaghetti" 
+        },
+        {
+            "name": "Elisabeth Berry",
+            "article": "Yummy Pie",
+            "desc": "Here's a recipe for the best Pie"
         }
     ],
     "authors": [
@@ -22,6 +37,34 @@
                 "article": "Tasty Tacos",
                 "desc": "Here's a recipe for the best Tacos"
             }, 
+            {
+                "article": "My Favorite Nachos",
+                "desc": "Here's a recipe for the best Nachos"
+            },
+            {
+                "article": "Award Winning Salsa",
+                "desc": "Here's a recipe for the best Salsa"
+            }
+        ],
+        [
+            {
+                "article": "Tasty Food",
+                "desc": "Here's a recipe for the best Tacos"
+            },
+            {
+                "article": "My Favorite Nachos",
+                "desc": "Here's a recipe for the best Nachos"
+            },
+            {
+                "article": "Award Winning Salsa",
+                "desc": "Here's a recipe for the best Salsa"
+            }
+        ],
+        [
+            {
+                "article": "Tasty Tacos",
+                "desc": "Here's a recipe for the best Tacos"
+            },
             {
                 "article": "My Favorite Nachos",
                 "desc": "Here's a recipe for the best Nachos"
@@ -45,12 +88,25 @@
                 "desc": "Here's a recipe for the best Cheesecake"
             }
         ], 
-
         [
             {
                 "article": "Delicious Alfredo",
                 "desc": "Here's a recipe for the best Alfredo"
             }, 
+            {
+                "article": "My Favorite Pasta",
+                "desc": "Here's a recipe for the best Pasta"
+            },
+            {
+                "article": "Award Winning Spaghetti",
+                "desc": "Here's a recipe for the best Spaghetti"
+            }
+        ],
+        [
+            {
+                "article": "Yummy Pie",
+                "desc": "Here's a recipe for the best Pie"
+            },
             {
                 "article": "My Favorite Pasta",
                 "desc": "Here's a recipe for the best Pasta"
