@@ -1,0 +1,19 @@
+{
+    "posts": [
+        {
+            "name": "Chris Hart",
+            "article": "Tasty Tacos",
+            "desc": "Here's a recipe for the best Tacos" 
+        },
+        {
+            "name": "Sean Shealy",
+            "article": "Delicious Cookies",
+            "desc": "Here's a recipe for the best Cookies" 
+        }, 
+        {
+            "name": "Ashley Grant",
+            "article": "Yummy Spaghetti",
+            "desc": "Here's a recipe for the best Spaghetti" 
+        }
+    ]
+}
