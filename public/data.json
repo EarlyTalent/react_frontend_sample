@@ -1,0 +1,65 @@
+[
+  {
+    "id": "chris-hart",
+    "author": "Chris Hart",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Tasty Tacos",
+        "content": "Here's how to make the best tacos ever."
+      },
+      {
+        "id": 2,
+        "title": "How to Make a Pizza",
+        "content": "Here's how to make a pizza."
+      },
+      {
+        "id": 3,
+        "title": "Cookies and Cream",
+        "content": "Here's how to make cookies and cream."
+      }
+    ]
+  },
+  {
+    "id": "sean-shealy",
+    "author": "Sean Shealy",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Delicious Donuts",
+        "content": "Here's how to make the best donuts ever."
+      },
+      {
+        "id": 2,
+        "title": "How to Make a Burger",
+        "content": "Here's how to make a burger."
+      },
+      {
+        "id": 3,
+        "title": "Chocolate and Peanut Butter",
+        "content": "Here's how to make chocolate and peanut butter."
+      }
+    ]
+  },
+  {
+    "id": "ashley-grant",
+    "author": "Ashley Grant",
+    "posts": [
+      {
+        "id": 1,
+        "title": "Yummy Yogurt",
+        "content": "Here's how to make the best yogurt ever."
+      },
+      {
+        "id": 2,
+        "title": "How to Make a Sandwich",
+        "content": "Here's how to make a sandwich."
+      },
+      {
+        "id": 3,
+        "title": "Vanilla and Strawberry",
+        "content": "Here's how to make vanilla and strawberry."
+      }
+    ]
+  }
+]
