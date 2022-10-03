@@ -1,23 +1,25 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
   color: white;
+  background-color: darkcyan;
+  padding: 15px;
+  font-family: "Georgia", serif;
 }
 
-.App-link {
-  color: #61dafb;
+.body {
+  margin: 20px;
+  font-family: "Georgia", serif;
+}
+
+.person {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.recipe-box {
+  border: 2px solid;
+  border-color: darkorange;
+}
+
+.recipe {
+  margin: 10px;
 }
